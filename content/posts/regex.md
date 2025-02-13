@@ -3,6 +3,7 @@ title : '正则表达式'
 date : 2024-09-24T19:02:17+08:00
 draft : false
 featured_image : /image/regex.png
+tags : ['regex',"vscode"]
 ---
 
 # 正则表达式

@@ -3,6 +3,7 @@ title : '所有权与函数'
 date : 2024-05-01T03:10:07+08:00
 draft : false
 featured_image : "image/rust.jpg"
+tags : ["rust"]
 ---
 
 # 所有权与函数

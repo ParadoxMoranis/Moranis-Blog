@@ -2,20 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://moranis.netlify.app/tags/cpp/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/linux/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/macos/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
     <loc>https://moranis.netlify.app/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
   </url><url>
     <loc>https://moranis.netlify.app/posts/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
   </url><url>
+    <loc>https://moranis.netlify.app/tags/qt/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/remote-clipboard/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/wayland/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/windows/</loc>
+    <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
     <loc>https://moranis.netlify.app/posts/aboutremoteclipboard/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/regex/</loc>
+    <lastmod>2024-09-24T19:02:17+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/vscode/</loc>
+    <lastmod>2024-09-24T19:02:17+08:00</lastmod>
   </url><url>
     <loc>https://moranis.netlify.app/posts/regex/</loc>
     <lastmod>2024-09-24T19:02:17+08:00</lastmod>
   </url><url>
+    <loc>https://moranis.netlify.app/tags/framework/</loc>
+    <lastmod>2024-07-02T22:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/java/</loc>
+    <lastmod>2024-07-02T22:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/spring/</loc>
+    <lastmod>2024-07-02T22:58:06+08:00</lastmod>
+  </url><url>
     <loc>https://moranis.netlify.app/posts/spring_experience/</loc>
     <lastmod>2024-07-02T22:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://moranis.netlify.app/tags/rust/</loc>
+    <lastmod>2024-05-08T22:15:01+08:00</lastmod>
   </url><url>
     <loc>https://moranis.netlify.app/posts/reference/</loc>
     <lastmod>2024-05-08T22:15:01+08:00</lastmod>
@@ -31,6 +73,6 @@
   </url><url>
     <loc>https://moranis.netlify.app/categories/</loc>
   </url><url>
-    <loc>https://moranis.netlify.app/tags/</loc>
+    <loc>https://moranis.netlify.app/_posts/</loc>
   </url>
 </urlset>

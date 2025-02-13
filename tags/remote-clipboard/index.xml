@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Clipboard on Moranis-Blog</title>
+    <link>https://moranis.netlify.app/tags/remote-clipboard/</link>
+    <description>Recent content in Remote Clipboard on Moranis-Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 02 Feb 2025 19:42:33 +0800</lastBuildDate>
+    <atom:link href="https://moranis.netlify.app/tags/remote-clipboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>远程共享粘贴板</title>
+      <link>https://moranis.netlify.app/posts/aboutremoteclipboard/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/posts/aboutremoteclipboard/</guid>
+      <description>&lt;h1 id=&#34;remote-clipboard-高效跨设备剪贴板同步系统&#34;&gt;Remote Clipboard: 高效跨设备剪贴板同步系统&lt;/h1&gt;&#xA;&lt;h2 id=&#34;项目背景&#34;&gt;项目背景&lt;/h2&gt;&#xA;&lt;p&gt;在现代开发与办公环境中，多设备协作已成为常态。然而，在不同设备间传输临时文本内容往往依赖聊天软件或云笔记，效率低下且操作繁琐。特别是在 Linux 下，Wayland 对剪贴板访问的限制，使得跨设备复制粘贴更具挑战性。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

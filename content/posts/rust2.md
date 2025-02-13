@@ -3,6 +3,7 @@ title : '所有权规则，内存与分配'
 date : 2024-04-26T23:52:39+08:00
 draft : false
 featured_image : "/image/rust.jpg"
+tags : ["rust"]
 ---
 
 # String类型

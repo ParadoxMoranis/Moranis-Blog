@@ -3,6 +3,7 @@ title : '快速尝试Spring'
 date : 2024-07-02T22:58:06+08:00
 draft : false
 featured_image : "/image/Spring.png"
+tags : ['Spring',"java","framework"]
 ---
 
 # spring目录

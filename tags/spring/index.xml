@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Moranis-Blog</title>
+    <link>https://moranis.netlify.app/tags/spring/</link>
+    <description>Recent content in Spring on Moranis-Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jul 2024 22:58:06 +0800</lastBuildDate>
+    <atom:link href="https://moranis.netlify.app/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速尝试Spring</title>
+      <link>https://moranis.netlify.app/posts/spring_experience/</link>
+      <pubDate>Tue, 02 Jul 2024 22:58:06 +0800</pubDate>
+      <guid>https://moranis.netlify.app/posts/spring_experience/</guid>
+      <description>&lt;h1 id=&#34;spring目录&#34;&gt;spring目录&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://moranis.netlify.app/image/SpringMulu.png&#34; alt=&#34;目录：项目结构&#34;&gt;&#xA;java下的目录：&lt;br&gt;&#xA;controller:定义类&lt;br&gt;&#xA;entity：操作数据库时创建的对象类型，用于接受数据库的数据，其中的字段要和数据库的字段吻合&lt;br&gt;&#xA;mapper：定义mapper接口，定义操作数据库的动作&lt;br&gt;&#xA;service：返回数据给前端时对数据的操作，即业务逻辑，例如筛选过滤&lt;br&gt;&#xA;resources下的目录：&lt;br&gt;&#xA;mapper：在xml里写具体的操作数据库的sql语句&lt;br&gt;&#xA;application.yml:配置数据库和mybatis的mapper等&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

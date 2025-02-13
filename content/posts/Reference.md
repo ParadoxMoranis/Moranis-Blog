@@ -3,6 +3,7 @@ title : '引用与借用'
 date : 2024-05-08T22:15:01+08:00
 draft : false
 featured_image : "/image/rust.png"
+tags : ["rust"]
 ---
 
 # 引用和借用

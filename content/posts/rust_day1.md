@@ -3,6 +3,7 @@ title : '初识rust'
 date : 2024-04-12T18:03:35+08:00
 draft : false
 featured_image : '/image/rust.png'
+tags : ['rust']
 ---
 
 # First try of rust

@@ -6,6 +6,98 @@
     <description>Recent content in Tags on Moranis-Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sun, 02 Feb 2025 19:42:33 +0800</lastBuildDate>
     <atom:link href="https://moranis.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cpp</title>
+      <link>https://moranis.netlify.app/tags/cpp/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://moranis.netlify.app/tags/linux/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MacOS</title>
+      <link>https://moranis.netlify.app/tags/macos/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/macos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qt</title>
+      <link>https://moranis.netlify.app/tags/qt/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/qt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote Clipboard</title>
+      <link>https://moranis.netlify.app/tags/remote-clipboard/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/remote-clipboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wayland</title>
+      <link>https://moranis.netlify.app/tags/wayland/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/wayland/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://moranis.netlify.app/tags/windows/</link>
+      <pubDate>Sun, 02 Feb 2025 19:42:33 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regex</title>
+      <link>https://moranis.netlify.app/tags/regex/</link>
+      <pubDate>Tue, 24 Sep 2024 19:02:17 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/regex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vscode</title>
+      <link>https://moranis.netlify.app/tags/vscode/</link>
+      <pubDate>Tue, 24 Sep 2024 19:02:17 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/vscode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Framework</title>
+      <link>https://moranis.netlify.app/tags/framework/</link>
+      <pubDate>Tue, 02 Jul 2024 22:58:06 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://moranis.netlify.app/tags/java/</link>
+      <pubDate>Tue, 02 Jul 2024 22:58:06 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring</title>
+      <link>https://moranis.netlify.app/tags/spring/</link>
+      <pubDate>Tue, 02 Jul 2024 22:58:06 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/spring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://moranis.netlify.app/tags/rust/</link>
+      <pubDate>Wed, 08 May 2024 22:15:01 +0800</pubDate>
+      <guid>https://moranis.netlify.app/tags/rust/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

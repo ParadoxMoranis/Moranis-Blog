@@ -90,12 +90,14 @@ s的值被移动到函数内，作用域移动到函数，而x由于实现了cop
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-05-01T03:10:07+08:00">
     <meta property="article:modified_time" content="2024-05-01T03:10:07+08:00">
+    <meta property="article:tag" content="Rust">
 
   <meta itemprop="name" content="所有权与函数">
   <meta itemprop="description" content="所有权与函数 在语义上，将值传递给函数和把值赋值给变量是类似的，要么发生移动，要么发生复制 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 let s = String::from(&#34;hello,world&#34;); take_ownership(s); let x = 5; makes_copy(x); println!(&#34;X:{}&#34;,x); fn take_ownership(some_string:String){ println!(&#34;{}&#34;,some_string); } fn make_copy(some_number: i32){ println!(&#34;{}&#34;,some_number); } s的值被移动到函数内，作用域移动到函数，而x由于实现了copy_trait，x仍然有效">
   <meta itemprop="datePublished" content="2024-05-01T03:10:07+08:00">
   <meta itemprop="dateModified" content="2024-05-01T03:10:07+08:00">
   <meta itemprop="wordCount" content="328">
+  <meta itemprop="keywords" content="Rust">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="所有权与函数">
   <meta name="twitter:description" content="所有权与函数 在语义上，将值传递给函数和把值赋值给变量是类似的，要么发生移动，要么发生复制 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 let s = String::from(&#34;hello,world&#34;); take_ownership(s); let x = 5; makes_copy(x); println!(&#34;X:{}&#34;,x); fn take_ownership(some_string:String){ println!(&#34;{}&#34;,some_string); } fn make_copy(some_number: i32){ println!(&#34;{}&#34;,some_number); } s的值被移动到函数内，作用域移动到函数，而x由于实现了copy_trait，x仍然有效">
@@ -316,6 +318,10 @@ s的值被移动到函数内，作用域移动到函数，而x由于实现了cop
 <p>（待更新）</p>
 <ul class="pa0">
   
+   <li class="list di">
+     <a href="/tags/rust/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Rust</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -327,6 +333,21 @@ s的值被移动到函数内，作用域移动到函数，而x由于实现了cop
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">相关內容</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/rust2/">所有权规则，内存与分配</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/rust_day1/">初识rust</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 
