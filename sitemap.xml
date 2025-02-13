@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://MoranisBlog.org/</loc>
     <lastmod>2025-02-13T11:22:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://MoranisBlog.org/posts/</loc>
     <lastmod>2025-02-13T11:22:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/test.test1/</loc>
+    <loc>https://MoranisBlog.org/posts/test.test1/</loc>
     <lastmod>2025-02-13T11:22:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://MoranisBlog.org/categories/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://MoranisBlog.org/tags/</loc>
   </url>
 </urlset>
