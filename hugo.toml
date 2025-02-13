@@ -1,4 +1,4 @@
-baseURL = 'https://ParadoxMoranis.github.io/'
+baseURL = 'https://example.org/'
 languageCode = 'zh-cn'
 title = 'Moranis-Blog'
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
@@ -56,6 +56,6 @@ enableEmoji = true
 
 # 启用目录
 [markup.tableOfContents]
-  endLevel = 2
+  endLevel = 1
   ordered = false
   startLevel = 1

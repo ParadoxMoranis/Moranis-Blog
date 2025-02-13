@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>所有权规则，内存与分配 | Moranis-Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="String类型
+
+String比其他标量数据类型都复杂。
+字符串字面值：程序里手写的字符串的值，他们是不可变的。
+string在heap上分配，能够储存编译时未知数量的文本
+
+创建string类型的值
+
+可以通过from函数从字符串字面值创建string类型
+example：
+let s = String::from(&ldquo;hello);
+&ldquo;::&ldquo;表示from是String类型下的函数
+这类字符串可以修改
+
+
+
+1
+2
+3
+4
+5
+6
+7
+
+
+fn main() {
+    let mut s = String::from(&#34;hello&#34;);
+
+    s.push_str(&#34;, world&#34;);
+
+    println!(&#34;{}&#34;,s)
+}
+
+
+运行结果：hello，world">
+    <meta name="generator" content="Hugo 0.143.1">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Moranis">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/images/bochi-git.jpg" type="image/x-icon" />
+
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://example.org/posts/rust2/">
+    
+
+    <meta property="og:url" content="https://example.org/posts/rust2/">
+  <meta property="og:site_name" content="Moranis-Blog">
+  <meta property="og:title" content="所有权规则，内存与分配">
+  <meta property="og:description" content="String类型 String比其他标量数据类型都复杂。 字符串字面值：程序里手写的字符串的值，他们是不可变的。 string在heap上分配，能够储存编译时未知数量的文本 创建string类型的值 可以通过from函数从字符串字面值创建string类型 example： let s = String::from(“hello); “::“表示from是String类型下的函数 这类字符串可以修改 1 2 3 4 5 6 7 fn main() { let mut s = String::from(&#34;hello&#34;); s.push_str(&#34;, world&#34;); println!(&#34;{}&#34;,s) } 运行结果：hello，world">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-26T23:52:39+08:00">
+    <meta property="article:modified_time" content="2024-04-26T23:52:39+08:00">
+
+  <meta itemprop="name" content="所有权规则，内存与分配">
+  <meta itemprop="description" content="String类型 String比其他标量数据类型都复杂。 字符串字面值：程序里手写的字符串的值，他们是不可变的。 string在heap上分配，能够储存编译时未知数量的文本 创建string类型的值 可以通过from函数从字符串字面值创建string类型 example： let s = String::from(“hello); “::“表示from是String类型下的函数 这类字符串可以修改 1 2 3 4 5 6 7 fn main() { let mut s = String::from(&#34;hello&#34;); s.push_str(&#34;, world&#34;); println!(&#34;{}&#34;,s) } 运行结果：hello，world">
+  <meta itemprop="datePublished" content="2024-04-26T23:52:39+08:00">
+  <meta itemprop="dateModified" content="2024-04-26T23:52:39+08:00">
+  <meta itemprop="wordCount" content="799">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="所有权规则，内存与分配">
+  <meta name="twitter:description" content="String类型 String比其他标量数据类型都复杂。 字符串字面值：程序里手写的字符串的值，他们是不可变的。 string在heap上分配，能够储存编译时未知数量的文本 创建string类型的值 可以通过from函数从字符串字面值创建string类型 example： let s = String::from(“hello); “::“表示from是String类型下的函数 这类字符串可以修改 1 2 3 4 5 6 7 fn main() { let mut s = String::from(&#34;hello&#34;); s.push_str(&#34;, world&#34;); println!(&#34;{}&#34;,s) } 运行结果：hello，world">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  
+  
+  
+  <header class="cover bg-center" style="background-image: url('https://example.org/image/rust.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Moranis-Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 页">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="文章 页">
+              文章
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="关于 页">
+              关于
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">所有权规则，内存与分配</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">所有权规则，内存与分配</h1>
+      
+      <p class="tracked"><strong>Moranis</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-04-26T23:52:39+08:00">四月 26, 2024</time>
+      
+
+      
+      
+        <span class="f6 mv4 dib tracked"> -  </span>
+        <span class="f6 mv4 dib tracked"> -  </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="string类型">String类型</h1>
+<ul>
+<li>String比其他标量数据类型都复杂。</li>
+<li>字符串字面值：程序里手写的字符串的值，他们是不可变的。</li>
+<li>string在heap上分配，能够储存编译时未知数量的文本</li>
+</ul>
+<h1 id="创建string类型的值">创建string类型的值</h1>
+<ul>
+<li>可以通过from函数从字符串字面值创建string类型
+example：
+let s = String::from(&ldquo;hello);
+&ldquo;::&ldquo;表示from是String类型下的函数</li>
+<li>这类字符串可以修改</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#ff79c6">fn</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#ff79c6">mut</span> s <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">String</span>::from(<span style="color:#f1fa8c">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    s.push_str(<span style="color:#f1fa8c">&#34;, world&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">&#34;</span>,s)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行结果：hello，world</p>
+<ul>
+<li>为什么String类型的值可以修改，而字符串字面量不可以修改？</li>
+</ul>
+<h1 id="内存和分配">内存和分配</h1>
+<ul>
+<li>字符串字面值，在编译是就已知它的内容，其文本内容直接被硬编码到可执行文件里</li>
+</ul>
+<p><img src="/image/String1.png" alt=""></p>
+<ul>
+<li>rust采用了不同的方式，对于某个值来说，当拥有它的变量走出作用域范围时，内存会立即自动交还给操作系统，自动调用drop函数</li>
+</ul>
+<h1 id="变量与数据交互的方式移动move">变量与数据交互的方式：移动（Move）</h1>
+<ul>
+<li>多个变量可以与同一个数据使用一种独特的方式交互</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> y <span style="color:#ff79c6">=</span> x;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>由于整数是已知的固定大小的简单的值，这两个5被压到了Stack中</li>
+</ul>
+<h2 id="string版本">String版本</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">String</span>::from(<span style="color:#f1fa8c">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s2 <span style="color:#ff79c6">=</span> s1;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/image/string2.png" alt="string的组成"></p>
+<h2 id="string的交互方式">string的交互方式</h2>
+<p><img src="/image/string3.png" alt="危险"></p>
+<p><img src="/image/string4.png" alt="rust的处理方法"></p>
+<ul>
+<li>如果创s2之后再使用s1会怎样呢</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">String</span>::from(<span style="color:#f1fa8c">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s2 <span style="color:#ff79c6">=</span> s1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>println!(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">&#34;</span>,s1);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行结果：
+<img src="/image/string5.png" alt="运行结果"></p>
+<h1 id="交互方式克隆">交互方式：克隆</h1>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">String</span>::from(<span style="color:#f1fa8c">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> s2 <span style="color:#ff79c6">=</span> s1.clone();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>println!(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">&#34;</span>,s1);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>clone属于深拷贝</p>
+<h2 id="stack上的数据复制">stack上的数据：复制</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#ff79c6">fn</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> y <span style="color:#ff79c6">=</span> x;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">,</span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">&#34;</span>,x,y);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>copy trait,可以用于像整数一样完全存放在stack上的类型</li>
+<li>如果一个类型实现了copy这个trait，那么旧的变量在赋值后依然可用</li>
+<li>如果一个类型或者该类型的一部分实现了drop trait，那么rust不再允许它实现Copy trait了</li>
+</ul>
+<h1 id="一些拥有copy-trait的类型">一些拥有copy trait的类型</h1>
+<ul>
+<li>任何简单的标量组合类型都可以是copy的</li>
+<li>任何需要分配内存或某种资源的都不是Copy的</li>
+</ul>
+<p>一些拥有Copt trait的类型：<br>
+所有的整数类型，例如u32<br>
+bool<br>
+char<br>
+所有的浮点类型，例如f64<br>
+Tuple（元组），如果其所有字段都是Copy的</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
+    &copy;  Moranis-Blog 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
