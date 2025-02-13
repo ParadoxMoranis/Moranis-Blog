@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/aboutremoteclipboard/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/aboutremoteclipboard/</loc>
     <lastmod>2025-02-02T19:42:33+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/regex/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/regex/</loc>
     <lastmod>2024-09-24T19:02:17+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/spring_experience/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/spring_experience/</loc>
     <lastmod>2024-07-02T22:58:06+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/reference/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/reference/</loc>
     <lastmod>2024-05-08T22:15:01+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/rust3/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/rust3/</loc>
     <lastmod>2024-05-01T03:10:07+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/rust2/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/rust2/</loc>
     <lastmod>2024-04-26T23:52:39+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/posts/rust_day1/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/posts/rust_day1/</loc>
     <lastmod>2024-04-12T18:03:35+08:00</lastmod>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/categories/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/categories/</loc>
   </url><url>
-    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static/tags/</loc>
+    <loc>https://github.com/ParadoxMoranis/Moranis-Blog/tags/</loc>
   </url>
 </urlset>

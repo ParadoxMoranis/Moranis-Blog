@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static'
+baseURL = 'https://github.com/ParadoxMoranis/Moranis-Blog'
 languageCode = 'zh-cn'
 title = 'Moranis-Blog'
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
