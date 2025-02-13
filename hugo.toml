@@ -1,4 +1,4 @@
-baseURL = 'https://moranis.netfily.app'
+baseURL = 'https://github.com/ParadoxMoranis/Moranis-Blog/tree/main/static'
 languageCode = 'zh-cn'
 title = 'Moranis-Blog'
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
